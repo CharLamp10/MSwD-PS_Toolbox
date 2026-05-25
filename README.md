@@ -10,3 +10,5 @@ Below, we provide concrete step-by-step instructions on how to initialize and us
 addpath(genpath('C:\path\to\MSWD_Toolbox'))
 mswd_ps_main;
 ```
+Then, the window showed at the left of the figure below will pop up. By clicking "Select Files & Run", two more windows will succesively open, asking for the input files and the output directory respectively.
+![Architecture Diagram](plots/standalone_interface.png)

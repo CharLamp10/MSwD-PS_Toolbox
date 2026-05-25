@@ -58,15 +58,13 @@ Notably, the four modules can also be executed independently. For example, if th
 # Reproducibility
 For an initial reproducibility assessment and to familiarize with the toolbox, users can download example data from https://doi.org/10.6084/m9.figshare.29487764
 Specifically example1_files.zip can be used for the standalone version, while example2_files.zip can be used for the SPM-compatible version. The AAL3 atlas can be downloaded from our repository. For the standalone version, use the following arguments to get the same results as in example1_results.zip
-\begin{itemize}
-  \item Output prefix: ex1
-  \item $Corr_{th}$: 0.02
-  \item $StD{th}$: 0.05
-  \item Save the decomposed fMRI signals: Yes
-  \item Run TVPS, REC or both: both
-  \item Save TVPS outputs: Yes
-  \item Estimate brain states across all samples using the TVPS data: Yes
-  \item Specify the number of states (for K-means) or use the silhouette score for automatic estimation: Specify
-  \item Enter number of states: 2
-  \item Enter a value for the reconstruction parameter lambda: 0.5
-\end{itemize}
+- Output prefix: `ex1`
+- $Corr_{th}$: `0.02`
+- $StD_{th}$: `0.05`
+- Save the decomposed fMRI signals: Yes
+- Run TVPS, REC or both: both
+- Save TVPS outputs: Yes
+- Estimate brain states across all samples using the TVPS data: Yes
+- Specify the number of states (for K-means) or use the silhouette score for automatic estimation: Specify
+- Enter number of states: `2`
+- Enter a value for the reconstruction parameter lambda: `0.5`

@@ -27,5 +27,15 @@ By clicking "REC", a signal reconstruction approach will take place, using diffe
 By clicking "both", both the TVPS and reconstruction analyses are performed.
 
 # SPM-Compatible Version
+The SPM-compatible version requires the SPM12 to be installed first. It can be downloaded from: https://www.fil.ion.ucl.ac.uk/spm/
+
+Then the followng commands can be used in the MATLAB Command Window to add the required paths and initialize SPM.
+```matlab
+addpath C:\path\to\spm12
+addpath(genpath('C:\path\to\MSWD_Toolbox'))
+spm('fmri','defaults')
+```
+
+Next, in the SPM main window, click on Batch to open the Batch Editor. In the Batch Editor window, go to File -> Add Application -> spm12_parcellate.m, and click Done. Repeat this process to add the following applications: spm12_mswd.m, spm12_tvps.m, and spm12_reconstruct.m. The spm12_mswd.m, spm12_tvps.m, and spm12_reconstruct.m carry out effectively the same procedures that were described previously on the standalone version. However, the SPM-compatible version includes an additional module, the spm12_parcellate. This module enables the SPM-compatible version to be applied to volumetric data. Specifically, this module is first used to extract time series from volumetric fMRI data, and then these time series can be used exactly as described previously.
 
 

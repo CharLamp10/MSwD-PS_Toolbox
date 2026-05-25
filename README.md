@@ -178,8 +178,8 @@ In the example shown above:
 The second module requires:
 
 - input `.mat` files
-- `$Corr_{th}$`
-- `$Std_{th}$`
+- `Corr_{th}`
+- `Std_{th}`
 
 When the module follows the parcellation step, the user can use the Dependency button to directly use the outputs of the previous module as inputs.
 

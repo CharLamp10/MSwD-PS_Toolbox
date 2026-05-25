@@ -11,4 +11,7 @@ addpath(genpath('C:\path\to\MSWD_Toolbox'))
 mswd_ps_main;
 ```
 Then, the window showed at the left of the figure below will pop up. By clicking "Select Files & Run", two more windows will succesively open, asking for the input files and the output directory respectively.
-![Architecture Diagram](plots/standalone_interface.png)
+![Standalone Interface](plots/standalone_interface.png)
+
+Then, a series of additional prompting windows will successively open, asking the user to define some analysis-related parameters. An overview of these windows is shown below:
+![Standalone Inputs](plots/standalone_inputs2.png)

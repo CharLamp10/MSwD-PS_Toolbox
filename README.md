@@ -13,5 +13,8 @@ mswd_ps_main;
 Then, the window showed at the left of the figure below will pop up. By clicking "Select Files & Run", two more windows will succesively open, asking for the input files and the output directory respectively.
 ![Standalone Interface](plots/standalone_interface.png)
 
-Then, a series of additional prompting windows will successively open, asking the user to define some analysis-related parameters. An overview of these windows is shown below:
+Then, a series of additional dialog windows will successively open, asking the user to define some analysis-related parameters. An overview of these windows is shown below:
 ![Standalone Inputs](plots/standalone_inputs2.png)
+
+Each dialog window comes with a default option, to allow for non-familiar users to easily use the software. In multiple-choice windows the default is highlighted with light blue, while in windows asking for specific values, the default value is already pre-filled.
+

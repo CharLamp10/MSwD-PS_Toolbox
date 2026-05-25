@@ -47,6 +47,8 @@ The parameters for decomposition, TVPS calculation, brain state estimation, and 
 
 The below figure illustrates the four modules when fully specified. In the first module (top left panel), five NIfTI (.nii) files containing rs-fMRI data are selected as input. For the atlas, the AAL3 atlas is used. The prefix is set to "ex2". For band-pass filtering, we select "Yes" and specify the frequency band as the standard low-frequency range [0.01–0.1] Hz.
 
+![SPM batch full](plots/spm_batch_full2.png)
+
 In the second module (top right panel), the required variables include the input .mat files, the correlation threshold ($Corr_{th}$), and the component standard deviation threshold ($StD_{th}$). Since the "Run MSWD" module follows the "Parcellate data" module, the user can use the "Dependency" button to pass the output of the "Parcellate data" module directly as the input. Similarly, in the third and fourth modules (bottom left and right panels, respectively), the input .mat files can be specified via the "Dependency" button as the output of the "Run MSWD" module.
 
 In addition to the input files, the third module requires the user to specify whether to save the TVPS results and to configure parameters related to brain state estimation, as in the standalone version. The fourth module requires the user to set a value for the reconstruction factor $\lambda$. For all variables, a help window at the bottom of the Batch Editor provides additional information and default values where applicable.

@@ -183,11 +183,61 @@ The second module requires:
 
 When the module follows the parcellation step, the user can use the Dependency button to directly use the outputs of the previous module as inputs.
 
-In the second module (top right panel), the required variables include the input .mat files, the correlation threshold ($Corr_{th}$), and the component standard deviation threshold ($StD_{th}$). Since the "Run MSWD" module follows the "Parcellate data" module, the user can use the "Dependency" button to pass the output of the "Parcellate data" module directly as the input. Similarly, in the third and fourth modules (bottom left and right panels, respectively), the input .mat files can be specified via the "Dependency" button as the output of the "Run MSWD" module.
+**TVPS Module**
+The third module allows the user to:
 
-In addition to the input files, the third module requires the user to specify whether to save the TVPS results and to configure parameters related to brain state estimation, as in the standalone version. The fourth module requires the user to set a value for the reconstruction factor $\lambda$. For all variables, a help window at the bottom of the Batch Editor provides additional information and default values where applicable.
+- save TVPS outputs
+- configure brain state estimation settings
+- select manual or automatic estimation of the number of states
 
-Notably, the four modules can also be executed independently. For example, if the "Parcellate data" module has already been run in a previous session, the user can ommit it from the module list and manually select the resulting input files when configuring the "Run MSWD" module, instead of using the "Dependency" option. Similarly, the "TVPS Analysis" and "Reconstruction" modules can be run independently, allowing for flexible reuse of intermediate results.
+Inputs can also be passed using the Dependency button.
+
+**Reconstruction Module**
+The fourth module performs signal reconstruction and requires the reconstruction parameter: lambda
+
+As with the previous modules, inputs can be passed using the Dependency option.
+
+**Independent Module Execution**
+All modules can also be executed independently.
+
+For example:
+
+- if parcellation has already been completed, the `spm12_parcellate.m` module can be omitted
+- previously generated `.mat` files can be manually selected as inputs
+- TVPS and reconstruction analyses can be run separately on existing MSwD outputs
+
+This design enables flexible reuse of intermediate results across sessions.
+
+# Reproducibility
+Example datasets for reproducibility assessment are available at:
+
+https://doi.org/10.6084/m9.figshare.29487764
+
+Use:
+
+- `example1_files.zip` for the standalone version
+- `example2_files.zip` for the SPM-compatible version
+
+The AAL3 atlas can also be downloaded from the repository.
+
+**Standalone Version Reproducibility Settings**
+To reproduce the results in `example1_results.zip`, use the following parameters:
+| Parameter                         | Value            |
+| --------------------------------- | ---------------- |
+| Output prefix                     | `ex1`            |
+| `Corr_th`                         | `0.02`           |
+| `Std_th`                          | `0.05`           |
+| Save decomposed signals           | Yes              |
+| Analysis mode                     | `both`           |
+| Save TVPS outputs                 | Yes              |
+| Brain state estimation            | Yes              |
+| State estimation method           | Specify manually |
+| Number of states                  | `2`              |
+| Reconstruction parameter `lambda` | `0.5`            |
+
+
+
+
 
 # Reproducibility
 For an initial reproducibility assessment and to familiarize with the toolbox, users can download example data from https://doi.org/10.6084/m9.figshare.29487764

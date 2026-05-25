@@ -38,4 +38,16 @@ spm('fmri','defaults')
 
 Next, in the SPM main window, click on Batch to open the Batch Editor. In the Batch Editor window, go to File -> Add Application -> spm12_parcellate.m, and click Done. Repeat this process to add the following applications: spm12_mswd.m, spm12_tvps.m, and spm12_reconstruct.m. The spm12_mswd.m, spm12_tvps.m, and spm12_reconstruct.m carry out effectively the same procedures that were described previously on the standalone version. However, the SPM-compatible version includes an additional module, the spm12_parcellate. This module enables the SPM-compatible version to be applied to volumetric data. Specifically, this module is first used to extract time series from volumetric fMRI data, and then these time series can be used exactly as described previously.
 
+The figure below shows illustrative examples of the Batch Editor window before and after adding all modules, in the left and right panels, respectively.
+![SPM batch init](plots/spm_batch_init.png)
+
+All fields marked with an ->X must be specified; once all required fields are completed, the "Run Batch" button turns green, allowing the batch to be executed.
+
+The parameters for decomposition, TVPS calculation, brain state estimation, and reconstruction are the same as in the standalone version. The key difference is the addition of the parcellation module. In this step, the user selects an atlas and decides whether to apply band-pass filtering. If filtering is applied, the user specifies the desired frequency band.
+
+The below figure illustrates the four modules when fully specified. In the first module (top left panel), five NIfTI (.nii) files containing rs-fMRI data are selected as input. For the atlas, the AAL3 atlas is used. The prefix is set to "ex2". For band-pass filtering, we select "Yes" and specify the frequency band as the standard low-frequency range [0.01–0.1] Hz.
+
+In the second module (top right panel), the required variables include the input .mat files, the correlation threshold ($Corr_{th}$), and the component standard deviation threshold ($StD_{th}$). Since the "Run MSWD" module follows the "Parcellate data" module, the user can use the "Dependency" button to pass the output of the "Parcellate data" module directly as the input. Similarly, in the third and fourth modules (bottom left and right panels, respectively), the input .mat files can be specified via the "Dependency" button as the output of the "Run MSWD" module.
+
+In addition to the input files, the third module requires the user to specify whether to save the TVPS results and to configure parameters related to brain state estimation, as in the standalone version. The fourth module requires the user to set a value for the reconstruction factor $\lambda$. For all variables, a help window at the bottom of the Batch Editor provides additional information and default values where applicable.
 

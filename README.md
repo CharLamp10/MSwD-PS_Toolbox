@@ -68,3 +68,9 @@ Specifically example1_files.zip can be used for the standalone version, while ex
 - Specify the number of states (for K-means) or use the silhouette score for automatic estimation: Specify
 - Enter number of states: `2`
 - Enter a value for the reconstruction parameter lambda: `0.5`
+
+The same arguments can be used for the SPM-Compatible version. However, for the parcellation module, which is not included in the standalone version, use the following arguments:
+- Input .nii atlas: The atlas from https://doi.org/10.6084/m9.figshare.29487764
+- Filename prefix: `ex2`
+- Band-pass filtering: Yes
+- Frequency band for band-pass filtering: [0.01 0.1]

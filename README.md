@@ -51,3 +51,6 @@ In the second module (top right panel), the required variables include the input
 
 In addition to the input files, the third module requires the user to specify whether to save the TVPS results and to configure parameters related to brain state estimation, as in the standalone version. The fourth module requires the user to set a value for the reconstruction factor $\lambda$. For all variables, a help window at the bottom of the Batch Editor provides additional information and default values where applicable.
 
+Notably, the four modules can also be executed independently. For example, if the "Parcellate data" module has already been run in a previous session, the user can ommit it from the module list and manually select the resulting input files when configuring the "Run MSWD" module, instead of using the "Dependency" option. Similarly, the "TVPS Analysis" and "Reconstruction" modules can be run independently, allowing for flexible reuse of intermediate results.
+
+
